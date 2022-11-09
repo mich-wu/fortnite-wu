@@ -1,12 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function App() {
-  const title = 'Welcome to Forkknife Wu'
-
   return (
     <div className="App">
+      <Navbar />
+
       <div className="content">
-        <h1> {title} </h1>
+        <h1> Welcome to Forkknife Wu </h1>
       </div>
     </div>
   )
