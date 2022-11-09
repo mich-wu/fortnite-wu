@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Home from './Home'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <Navbar />
 
       <div className="content">
-        <h1> Welcome to Forkknife Wu </h1>
+        <Home />
       </div>
     </div>
   )
