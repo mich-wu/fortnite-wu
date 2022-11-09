@@ -6,6 +6,7 @@ const Navbar = () => {
       <h1>NAVBAR.JSX</h1>
       <div className="links">
         <a href="/">Home</a>
+        <a href="/about">About Wu</a>
         <a href="/skins">Skins Collection</a>
       </div>
     </nav>
