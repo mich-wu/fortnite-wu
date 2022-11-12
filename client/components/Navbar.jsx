@@ -1,14 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1>Forkknife Wu 🍴</h1>
-      <div className="links">
-        <a href="/about">About Wu</a>
-        <a href="/skins">Skins Collection</a>
-      </div>
-    </nav>
+    <>
+      <nav className="navbar">
+        <Link to={`/`}> Forkknife Wu 🍴</Link>
+        <div className="links">
+          <Link to={`/about`}>About Wu</Link>
+          <Link to={`/skins`}>Skins </Link>
+        </div>
+      </nav>
+    </>
   )
 }
 

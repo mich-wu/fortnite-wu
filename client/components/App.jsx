@@ -3,17 +3,21 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 
 import Navbar from './Navbar'
 import Home from './Home'
+import About from './About'
+import Skins from './Skins'
 
 function App() {
   return (
     <>
-      <div className="App">
+      <Router>
         <Navbar />
-
-        <div className="content">
-          <Home />
-        </div>
-      </div>
+        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skins" element={<Skins />} />
+        </Routes>
+      </Router>
     </>
   )
 }

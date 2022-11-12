@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  font-family: "Quicksand";
   color: #333;
 }
 
@@ -25,6 +24,7 @@ body{
 
 }
 .navbar {
+  font-size: 25px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -52,6 +52,13 @@ body{
   padding: 20px;
 }
 
+.about{
+  text-align: center;
+}
+
+.skins{
+  text-align: center;
+}
 h2{
   text-align: center;
 }
