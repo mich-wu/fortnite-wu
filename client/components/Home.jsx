@@ -93,7 +93,7 @@ const Home = () => {
         etiam sit amet nisl. Erat pellentesque adipiscing commodo elit at
         imperdiet dui accumsan sit. Magna ac placerat vestibulum lectus mauris
         ultrices. Arcu odio ut sem nulla pharetra diam. In hac habitasse platea
-        dictumst quisque sagittis purus sit amet.
+        dictumst quisque sagittis purus sit amet...
       </div>
     </>
   )
