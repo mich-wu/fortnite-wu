@@ -1,9 +1,20 @@
 import request from 'superagent'
 
 export function getItemShop() {
-  return request
-    .get('https://api.fortnitetracker.com/v1/store')
-    .then((response) => {
-      return response.body
-    })
+  return request.get('/api/v1/store').then((response) => {
+    // console.log(response.body)
+    return response.body
+  })
+}
+
+export function getPlayerStat() {
+  return request.get('/api/v1/profile').then((response) => {
+    return response.body
+  })
+}
+
+export function getChallenges() {
+  return request.get('/api/v1/challenges').then((response) => {
+    return response.body
+  })
 }

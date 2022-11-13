@@ -6,6 +6,8 @@ import Home from './Home'
 import About from './About'
 import Skins from './Skins'
 import ItemShop from './ItemShop'
+import Kitahankyu from './Kitahankyu'
+import Challenges from './Challenges'
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/itemshop" element={<ItemShop />} />
           <Route path="/about" element={<About />} />
           <Route path="/skins" element={<Skins />} />
+          {<Route path="/kitahankyu" element={<Kitahankyu />} />}
+          <Route path="/challenges" element={<Challenges />} />
+          <Route path="/itemshop" element={<ItemShop />} />
         </Routes>
       </Router>
     </>
