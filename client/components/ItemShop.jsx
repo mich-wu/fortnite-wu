@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { getItemShop } from '../apiClient'
 
-process.env
+import { getItemShop } from '../apiClient'
 
 export default function ItemShop() {
   const [shopData, setShopData] = useState({})
