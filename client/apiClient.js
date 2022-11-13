@@ -12,3 +12,9 @@ export function getPlayerStat() {
     return response.body
   })
 }
+
+export function getChallenges() {
+  return request.get('/api/v1/challenges').then((response) => {
+    return response.body
+  })
+}

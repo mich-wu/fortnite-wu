@@ -7,7 +7,7 @@ export default function Kitahankyu() {
   useEffect(() => {
     getPlayerStat()
       .then((currentPlayer) => {
-        console.log('current player', currentPlayer)
+        //console.log('current player', currentPlayer)
         setPlayerData(currentPlayer)
       })
       .catch((err) => {
