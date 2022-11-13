@@ -13,16 +13,13 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
 
-server.get('*', (req, res) => {
-  res.sendFile(path.resolve('server/public/index.html'))
-})
-
 server.get('/api/v1/store', (req, res) => {
   request
     .get('https://api.fortnitetracker.com/v1/store')
-    .set('FORTNITE_API_KEY', apiKey)
+    .set('TRN-Api-Key', apiKey)
     .then((data) => {
-      res.json(data)
+      console.log('data', data.body)
+      res.json(data.body)
     })
     .catch((err) => {
       console.error(err)
@@ -30,4 +27,7 @@ server.get('/api/v1/store', (req, res) => {
     })
 })
 
+server.get('*', (req, res) => {
+  res.sendFile(path.resolve('server/public/index.html'))
+})
 module.exports = server

@@ -1,9 +1,8 @@
 import request from 'superagent'
 
 export function getItemShop() {
-  return request
-    .get('https://api.fortnitetracker.com/v1/store')
-    .then((response) => {
-      return response.body
-    })
+  return request.get('/api/v1/store').then((response) => {
+    console.log(response.body)
+    return response.body
+  })
 }
