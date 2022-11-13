@@ -58,14 +58,10 @@ body{
 
 .home{
 text-align: center;
-
 overflow-wrap: break-word;
-
 word-wrap: break-word;
-
 margin: 0 auto;
 max-width: 50%;
-
 padding: 12px;
 }
 
