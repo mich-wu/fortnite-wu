@@ -28,11 +28,10 @@ server.get('/api/v1/store', (req, res) => {
 
 // BELOW IS USING API FROM https://dash.fortnite-api.com/
 
-server.get('api/v2/news/br', (req, res) => {
+server.get('/api/v2/news/br', (req, res) => {
   request
     .get('https://fortnite-api.com/v2/news/br')
     .then((data) => {
-      console.log('data:', data.body)
       res.json(data.body)
     })
     .catch((err) => {
@@ -54,6 +53,8 @@ server.get('/api/v1/challenges', (req, res) => {
       res.sendStatus(500)
     })
 })
+
+// NOT WORKING//
 
 server.get('/api/v1/profile/', (req, res) => {
   request
