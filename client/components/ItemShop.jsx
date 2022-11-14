@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { getItemShop } from '../apiClient'
 
 export default function ItemShop() {
-  const [shopData, setShopData] = useState(null)
+  const [shopData, setShopData] = useState([])
 
   useEffect(() => {
     getItemShop()
-      .then((currentItemShop) => {
-        console.log('current item shop:', currentItemShop)
-        setShopData(currentItemShop)
+      .then((items) => {
+        console.log(items)
+        setShopData(items)
       })
       .catch((err) => {
         err.message
@@ -19,14 +19,6 @@ export default function ItemShop() {
     <>
       <div>
         <h1>Todays item shop below!</h1>
-        {/* {setShopData.map((item, i) => {
-          return (
-            <ul key={i}>
-              <h1>{shopData.name}</h1>
-              <h1>{shopData.vBucks}</h1>
-            </ul>
-          )
-        })} */}
       </div>
     </>
   )
