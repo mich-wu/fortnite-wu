@@ -71,3 +71,9 @@ h2{
 h1{
   text-align: center;
 }
+
+.item-image{
+
+  align-items: center;
+width: 300px;
+}

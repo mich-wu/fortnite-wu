@@ -26,6 +26,20 @@ server.get('/api/v1/store', (req, res) => {
     })
 })
 
+// BELOW IS USING API FROM https://dash.fortnite-api.com/
+
+server.get('/api/v2/news/br', (req, res) => {
+  request
+    .get('https://fortnite-api.com/v2/news/br')
+    .then((data) => {
+      res.json(data.body)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.sendStatus(500)
+    })
+})
+
 server.get('/api/v1/challenges', (req, res) => {
   request
     .get('https://api.fortnitetracker.com/v1/challenges')
@@ -39,19 +53,22 @@ server.get('/api/v1/challenges', (req, res) => {
       res.sendStatus(500)
     })
 })
-// server.get('/api/v1/profile/', (req, res) => {
-//   request
-//     .get('https://api.fortnitetracker.com/v1/profile/gamepad/kitahanyu')
-//     .set('TRN-Api-Key', apiKey)
-//     .then((data) => {
-//       //console.log('data', data.body)
-//       res.json(data.body)
-//     })
-//     .catch((err) => {
-//       console.error(err)
-//       res.sendStatus(500)
-//     })
-// })
+
+// NOT WORKING//
+
+server.get('/api/v1/profile/', (req, res) => {
+  request
+    .get('https://api.fortnitetracker.com/v1/profile/gamepad/kitahanyu')
+    .set('TRN-Api-Key', apiKey)
+    .then((data) => {
+      //console.log('data', data.body)
+      res.json(data.body)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.sendStatus(500)
+    })
+})
 
 server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))

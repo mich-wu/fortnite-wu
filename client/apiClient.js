@@ -7,6 +7,13 @@ export function getItemShop() {
   })
 }
 
+export function getNews() {
+  return request.get('/api/v2/news/br').then((response) => {
+    //console.log('apiClient:', response.body)
+    return response.body
+  })
+}
+
 export function getPlayerStat() {
   return request.get('/api/v1/profile').then((response) => {
     return response.body

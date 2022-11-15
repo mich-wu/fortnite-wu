@@ -8,6 +8,7 @@ import Skins from './Skins'
 import ItemShop from './ItemShop'
 import Kitahankyu from './Kitahankyu'
 import Challenges from './Challenges'
+import News from './News'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           {<Route path="/kitahankyu" element={<Kitahankyu />} />}
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/itemshop" element={<ItemShop />} />
+          <Route path="/news" element={<News />} />
         </Routes>
       </Router>
     </>
