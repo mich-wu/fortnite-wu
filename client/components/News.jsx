@@ -7,20 +7,22 @@ export default function News() {
   useEffect(() => {
     getNews()
       .then((currentNews) => {
-        console.log(typeof newsData)
+        console.log(currentNews)
         setNewsData(currentNews)
       })
       .catch((err) => {
         err.message
       })
   }, [])
+  console.log(newsData.data?.motds[0].body)
 
   return (
     <>
       <div>
         <h1>
           Current News:
-          {newsData.status}
+          <p>{newsData.data?.motds[0].title}</p>
+          <p>{newsData.data?.motds[0].body}</p>
           {/* 
         <p>{newsData.map((news, index)) => {
           return (
