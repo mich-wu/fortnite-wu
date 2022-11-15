@@ -21,8 +21,15 @@ export default function News() {
       <div>
         <h1>
           Current News:
-          <p>{newsData.data?.motds[0].title}</p>
+          <p>{newsData.data?.motds[0].title}</p> <br />
           <p>{newsData.data?.motds[0].body}</p>
+          <br />
+          <p>{newsData.data?.motds[1].body}</p>
+          <br />
+          <p>{newsData.data?.motds[2].body}</p>
+          <br />
+          <p>{newsData.data?.motds[3].body}</p>
+          <br />
           {/* 
         <p>{newsData.map((news, index)) => {
           return (
