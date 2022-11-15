@@ -27,22 +27,23 @@ export default function ItemShop() {
         {/* {shopData.map((item) => {
           name, vbucks, imageUrl
         })} */}
+        <div className="skins">
+          <p>Name: {shopData[25]?.name}</p>
+          <p>vBucks: {shopData[25]?.vBucks}</p>
+          <img src={shopData[25]?.imageUrl} alt="fnbr" className="item-image" />
 
-        <p>Name: {shopData[25]?.name}</p>
-        <p>vBucks: {shopData[25]?.vBucks}</p>
-        <img src={shopData[25]?.imageUrl} alt="fnbr" className="item-image" />
+          <p>Name: {shopData[26]?.name}</p>
+          <p>vBucks: {shopData[26]?.vBucks}</p>
+          <img src={shopData[26]?.imageUrl} alt="fnbr" className="item-image" />
 
-        <p>Name: {shopData[26]?.name}</p>
-        <p>vBucks: {shopData[26]?.vBucks}</p>
-        <img src={shopData[26]?.imageUrl} alt="fnbr" className="item-image" />
+          <p>Name: {shopData[27]?.name}</p>
+          <p>vBucks: {shopData[27]?.vBucks}</p>
+          <img src={shopData[27]?.imageUrl} alt="fnbr" className="item-image" />
 
-        <p>Name: {shopData[27]?.name}</p>
-        <p>vBucks: {shopData[27]?.vBucks}</p>
-        <img src={shopData[27]?.imageUrl} alt="fnbr" className="item-image" />
-
-        <p>Name: {shopData[28]?.name}</p>
-        <p>vBucks: {shopData[28]?.vBucks}</p>
-        <img src={shopData[28]?.imageUrl} alt="fnbr" className="item-image" />
+          <p>Name: {shopData[29]?.name}</p>
+          <p>vBucks: {shopData[29]?.vBucks}</p>
+          <img src={shopData[29]?.imageUrl} alt="fnbr" className="item-image" />
+        </div>
       </div>
     </>
   )
