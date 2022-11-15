@@ -7,14 +7,14 @@ export default function News() {
   useEffect(() => {
     getNews()
       .then((currentNews) => {
-        console.log(currentNews)
+        //console.log(currentNews)
         setNewsData(currentNews)
       })
       .catch((err) => {
         err.message
       })
   }, [])
-  console.log(newsData.data?.motds[0].body)
+  //console.log(newsData.data?.motds[0].body)
 
   return (
     <>
@@ -24,10 +24,13 @@ export default function News() {
           <p>{newsData.data?.motds[0].title}</p> <br />
           <p>{newsData.data?.motds[0].body}</p>
           <br />
+          <p>{newsData.data?.motds[1].title}</p>
           <p>{newsData.data?.motds[1].body}</p>
           <br />
+          <p>{newsData.data?.motds[2].title}</p>
           <p>{newsData.data?.motds[2].body}</p>
           <br />
+          <p>{newsData.data?.motds[3].title}</p>
           <p>{newsData.data?.motds[3].body}</p>
           <br />
           {/* 
