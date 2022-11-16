@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Skins = () => {
+const Locker = () => {
   return (
-    <div className="skins">
+    <div className="locker">
       <h1>My locker below:</h1>
       <p>I have spent way too much money on this game lol</p>
       <img src="./images/defaultdance.gif" alt="default-dance"></img>
@@ -10,4 +10,4 @@ const Skins = () => {
   )
 }
 
-export default Skins
+export default Locker
