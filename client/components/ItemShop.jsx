@@ -27,9 +27,9 @@ export default function ItemShop() {
           {shopData?.map((item) => {
             return (
               <div key={item.manifestId}>
+                <img src={item?.imageUrl} alt="fnbr" className="shopimage" />
                 <p>Name: {item?.name}</p>
                 <p>vBucks: {item?.vBucks}</p>
-                <img src={item?.imageUrl} alt="fnbr" className="item-image" />
               </div>
             )
           })}

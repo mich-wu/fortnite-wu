@@ -70,12 +70,18 @@ h1{
   text-align: center;
 }
 
-.item-image{
-align-items: center;
-width: 300px;
+.news_body{
+text-align: center;
 }
 
-.news{
-  text-align: center;
-  align-items: center;
+.news_text{
+  background-color:#E684AE;
+}
+
+.news_image{
+  width: 500px;
+}
+
+.shopimage{
+  width: 300px;
 }

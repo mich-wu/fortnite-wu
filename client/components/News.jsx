@@ -17,20 +17,24 @@ export default function News() {
   console.log(newsData.data)
   return (
     <>
-      <div>
-        <h1>Todays news below!</h1>
-        <div className="news">
-          {newsData.data?.motds.map((news) => {
-            return (
-              <div key={news.id}>
-                <p>{news.title}</p> <br />
-                <p>{news.body}</p>
-                <img src={news.image} alt="newsimg" className="item-image" />
+      <h1>Todays news below!</h1>
+      <div className="news_body">
+        {newsData.data?.motds.map((news) => {
+          return (
+            <div key={news.id}>
+              <div className="news_text">
+                {news.title}
                 <br />
+                {news.body}
               </div>
-            )
-          })}
-        </div>
+              <img
+                src={news.image}
+                alt="Battle Royale"
+                className="news_image"
+              />
+            </div>
+          )
+        })}
       </div>
     </>
   )
