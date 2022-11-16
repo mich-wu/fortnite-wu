@@ -73,7 +73,11 @@ h1{
 }
 
 .item-image{
-
-  align-items: center;
+align-items: center;
 width: 300px;
+}
+
+.news{
+  text-align: center;
+  align-items: center;
 }
