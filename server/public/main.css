@@ -70,19 +70,6 @@ h1{
   text-align: center;
 }
 
-
-.news_body{
-text-align: center;
-}
-
-.news_text{
-
-}
-
-.news_image{
-  width: 500px;
-}
-
 .skins{
   text-align: center;
 }
@@ -93,4 +80,37 @@ text-align: center;
 
 .itemshoptext{
   text-align: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.news-wrapper {
+  position: relative;
+  width: 50vw;
+
+}
+
+.news-image {
+  display: block;
+  align-items: center;
+  width: 50vw;
+}
+
+.news-text {
+  display: block;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  /* font-size: 5rem; */
+  transition: opacity 0.6s;
+}
+
+.news-wrapper:hover .news-text {
+  opacity: 1;
 }

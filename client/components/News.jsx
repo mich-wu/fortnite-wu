@@ -14,29 +14,30 @@ export default function News() {
         err.message
       })
   }, [])
-  console.log(newsData.data)
+
   return (
-    <>
+    <div className="App">
       <h1>Todays news below!</h1>
-      <div className="news_body">
-        {newsData.data?.motds.map((news) => {
-          return (
-            <div key={news.id}>
-              <div className="news_text">
+
+      {newsData.data?.motds.map((news) => {
+        return (
+          <div key={news.id}>
+            <div className="news-wrapper">
+              <img
+                src={news.image}
+                alt="Battle Royale"
+                className="news-image"
+              />
+              <div className="news-text">
                 {news.title}
                 <br />
                 {news.body}
               </div>
-              <img
-                src={news.image}
-                alt="Battle Royale"
-                className="news_image"
-              />
             </div>
-          )
-        })}
-      </div>
-    </>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
