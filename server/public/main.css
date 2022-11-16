@@ -50,7 +50,7 @@ body{
   text-align: center;
 }
 
-.skins{
+.locker{
   text-align: center;
 }
 
@@ -70,12 +70,27 @@ h1{
   text-align: center;
 }
 
-.item-image{
-align-items: center;
-width: 300px;
+
+.news_body{
+text-align: center;
 }
 
-.news{
+.news_text{
+
+}
+
+.news_image{
+  width: 500px;
+}
+
+.skins{
   text-align: center;
-  align-items: center;
+}
+
+.shopimage{
+  width: 500px;
+}
+
+.itemshoptext{
+  text-align: center;
 }

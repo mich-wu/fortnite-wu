@@ -27,9 +27,15 @@ export default function ItemShop() {
           {shopData?.map((item) => {
             return (
               <div key={item.manifestId}>
-                <p>Name: {item?.name}</p>
-                <p>vBucks: {item?.vBucks}</p>
-                <img src={item?.imageUrl} alt="fnbr" className="item-image" />
+                <img
+                  src={item?.imageUrl}
+                  alt="fortnite item shop"
+                  className="shopimage"
+                />
+                <div className="itemshoptext">
+                  <p>Name: {item?.name}</p>
+                  <p>vBucks: {item?.vBucks}</p>
+                </div>
               </div>
             )
           })}

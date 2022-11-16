@@ -38,6 +38,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
+    "dracula-ui": "^1.0.3",
     "express": "^4.17.2",
     "react-router-dom": "^6.4.3"
   },
