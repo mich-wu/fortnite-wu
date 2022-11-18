@@ -125,8 +125,7 @@ h1{
 
 .news-text {
   display: block;
-  position: absolute;
-  background: white;
+  position: absolute;;
   top: 0;
   left: 0;
   right: 0;
