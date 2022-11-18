@@ -53,6 +53,18 @@ server.get('/api/v2/crew', (req, res) => {
       res.sendStatus(500)
     })
 })
+server.get('/api/v3/challenges', (req, res) => {
+  request
+    .get('https://fortniteapi.io/v3/challenges?season=current&lang=en')
+    .set('Authorization', key)
+    .then((data) => {
+      res.json(data.body)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.sendStatus(500)
+    })
+})
 
 server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))
