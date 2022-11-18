@@ -20,14 +20,14 @@ export function getCrew() {
   })
 }
 
+export function getChallenges() {
+  return request.get('/api/v3/challenges').then((response) => {
+    return response.body
+  })
+}
+
 // export function getPlayerStat() {
 //   return request.get('/api/v1/profile').then((response) => {
-//     return response.body
-//   })
-// }
-
-// export function getChallenges() {
-//   return request.get('/api/v1/challenges').then((response) => {
 //     return response.body
 //   })
 // }
