@@ -9,6 +9,7 @@ import ItemShop from './ItemShop'
 import Kitahankyu from './Kitahankyu'
 import Challenges from './Challenges'
 import News from './News'
+import Crew from './Crew'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
 
         <Routes>
+          <Route path="crewpack" element={<Crew />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/locker" element={<Locker />} />
