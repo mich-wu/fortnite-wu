@@ -29,9 +29,9 @@ export default function News() {
                 className="news-image"
               />
               <div className="news-text">
-                {news.title}
+                <p className="news-title">{news.title}</p>
                 <br />
-                {news.body}
+                <p className="news-body">{news.body}</p>
               </div>
             </div>
           </div>
