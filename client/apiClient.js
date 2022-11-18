@@ -14,14 +14,20 @@ export function getNews() {
   })
 }
 
-export function getPlayerStat() {
-  return request.get('/api/v1/profile').then((response) => {
+export function getCrew() {
+  return request.get('/api/v2/crew').then((response) => {
     return response.body
   })
 }
 
-export function getChallenges() {
-  return request.get('/api/v1/challenges').then((response) => {
-    return response.body
-  })
-}
+// export function getPlayerStat() {
+//   return request.get('/api/v1/profile').then((response) => {
+//     return response.body
+//   })
+// }
+
+// export function getChallenges() {
+//   return request.get('/api/v1/challenges').then((response) => {
+//     return response.body
+//   })
+// }

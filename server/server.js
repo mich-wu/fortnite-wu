@@ -6,6 +6,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const apiKey = process.env.FORTNITE_API_KEY
+const key = process.env.FN_API_KEY
 
 const server = express()
 
@@ -40,28 +41,11 @@ server.get('/api/v2/news/br', (req, res) => {
     })
 })
 
-server.get('/api/v1/challenges', (req, res) => {
+server.get('/api/v2/crew', (req, res) => {
   request
-    .get('https://api.fortnitetracker.com/v1/challenges')
-    .set('TRN-Api-Key', apiKey)
+    .get('https://fortniteapi.io/v2/crew?lang=en')
+    .set('Authorization', key)
     .then((data) => {
-      console.log('data', data.body)
-      res.json(data.body)
-    })
-    .catch((err) => {
-      console.error(err)
-      res.sendStatus(500)
-    })
-})
-
-// NOT WORKING//
-
-server.get('/api/v1/profile/', (req, res) => {
-  request
-    .get('https://api.fortnitetracker.com/v1/profile/gamepad/kitahanyu')
-    .set('TRN-Api-Key', apiKey)
-    .then((data) => {
-      //console.log('data', data.body)
       res.json(data.body)
     })
     .catch((err) => {
@@ -74,3 +58,34 @@ server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))
 })
 module.exports = server
+
+// NOT WORKING
+// server.get('/api/v1/challenges', (req, res) => {
+//   request
+//     .get('https://api.fortnitetracker.com/v1/challenges')
+//     .set('TRN-Api-Key', apiKey)
+//     .then((data) => {
+//       console.log('data', data.body)
+//       res.json(data.body)
+//     })
+//     .catch((err) => {
+//       console.error(err)
+//       res.sendStatus(500)
+//     })
+// })
+
+// NOT WORKING//
+
+// server.get('/api/v1/profile/', (req, res) => {
+//   request
+//     .get('https://api.fortnitetracker.com/v1/profile/gamepad/kitahanyu')
+//     .set('TRN-Api-Key', apiKey)
+//     .then((data) => {
+//       //console.log('data', data.body)
+//       res.json(data.body)
+//     })
+//     .catch((err) => {
+//       console.error(err)
+//       res.sendStatus(500)
+//     })
+// })
