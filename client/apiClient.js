@@ -16,6 +16,7 @@ export function getNews() {
 
 export function getCrew() {
   return request.get('/api/v2/crew').then((response) => {
+    console.log('crew:', response)
     return response.body
   })
 }
