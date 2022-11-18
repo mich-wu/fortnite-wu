@@ -33,8 +33,8 @@ export default function ItemShop() {
                   className="shopimage"
                 />
                 <div className="itemshoptext">
-                  <p>Name: {item?.name}</p>
-                  <p>vBucks: {item?.vBucks}</p>
+                  <p className="item-name">{item?.name}</p>
+                  <p className="vBucks">{item?.vBucks} vBucks</p>
                 </div>
               </div>
             )
