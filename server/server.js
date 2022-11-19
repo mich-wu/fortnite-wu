@@ -47,7 +47,6 @@ server.get('/api/v2/crew', (req, res) => {
     .set('Authorization', key)
     .then((data) => {
       res.json(data.body)
-      console.log(data.body)
     })
     .catch((err) => {
       console.error(err)
