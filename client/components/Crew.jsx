@@ -18,6 +18,7 @@ export default function Crewpack() {
   return (
     <>
       <h1>This months crew pack: </h1>
+      {crewData}
     </>
   )
 }

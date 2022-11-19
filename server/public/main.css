@@ -78,8 +78,8 @@ h1{
 
 .shopimage:hover {
   -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
-  transform: scale(5, -10px); 
+  -webkit-transform: scale(1.33); /* Safari 3-8 */
+  transform: scale(5, -1px); 
 }
 
 .shopimage{
