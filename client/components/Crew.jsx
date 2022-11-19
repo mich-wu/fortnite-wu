@@ -32,7 +32,7 @@ export default function Crewpack() {
 
   const rewards = getRewards(crewData)
   const { name, description, apiRender } = rewards[0]
-  console.log(rewards, 'REWARDS MAP')
+  //console.log(rewards, 'REWARDS MAP')
 
   // const getRewardsByIndex = (crewData, index) => {
   //   const rewards = getRewards(crewData)
@@ -59,8 +59,10 @@ function MonthlyCrew({ name, description, apiRender }) {
   return (
     <>
       <img src={apiRender} alt={description} className="crew" />
-      <p>{name}</p>
-      <p>{description}</p>
+      <p className="crewText">
+        {name} <br />
+        {description}
+      </p>
     </>
   )
 }
