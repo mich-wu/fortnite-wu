@@ -4,7 +4,7 @@ import { getCrew } from '../apiClient'
 export default function Crewpack() {
   const [crewData, setCrewData] = useState(null)
 
-  console.log(crewData, 'here')
+  //console.log(crewData, 'here')
 
   useEffect(() => {
     getCrew()
