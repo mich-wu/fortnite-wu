@@ -27,12 +27,12 @@ export default function Crewpack() {
     })
   }
   if (crewData == null || crewData.currentCrew.length == 0) {
-    return 'i have poopy pants'
+    return 'LOADING'
   }
 
   const rewards = getRewards(crewData)
   const { name, description, apiRender } = rewards[0]
-  console.log(rewards, 'REWARDS MAP')
+  //console.log(rewards, 'REWARDS MAP')
 
   // const getRewardsByIndex = (crewData, index) => {
   //   const rewards = getRewards(crewData)
