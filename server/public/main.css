@@ -205,3 +205,10 @@ text-decoration: underline;
     color: #ff79c6;
     text-align: center;
   }
+  
+  .insta{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 57vw;
+  }

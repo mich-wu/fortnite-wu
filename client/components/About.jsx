@@ -1,11 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div className="about">
-      <h1>HELLO FRIENDS</h1>
-      <p>My name is Michelle and I still play this freaking game lol</p>
-    </div>
+    <>
+      <a
+        href="https://www.instagram.com/forkknifewu/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src="./images/insta.png" alt="instagram" className="insta" />
+      </a>
+    </>
   )
 }
 
