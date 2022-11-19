@@ -9,7 +9,7 @@ export default function ItemShop() {
   useEffect(() => {
     getItemShop()
       .then((currentItems) => {
-        console.log(currentItems)
+        //console.log(currentItems)
         // isloading = false
         setShopData(currentItems)
       })
@@ -17,7 +17,7 @@ export default function ItemShop() {
         err.message
       })
   }, [])
-  // console.log(shopData[0]?.name)
+  //  console.log(shopData[0]?.name)
 
   return (
     <>
