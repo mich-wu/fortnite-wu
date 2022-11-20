@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getItemShop } from '../apiClient'
+import Timer from './Timer'
 
 export default function ItemShop() {
   const [shopData, setShopData] = useState([])
@@ -23,6 +24,7 @@ export default function ItemShop() {
     <>
       <div>
         <h1>Todays item shop below!</h1>
+        <Timer />
         <div className="skins">
           {shopData?.map((item) => {
             return (
