@@ -37,6 +37,7 @@ export default function ItemShop() {
                 <div className="itemshoptext">
                   <p className="item-name">{item?.name}</p>
                   <p className="vBucks">{item?.vBucks} vBucks</p>
+                  <p className="vBucks">Rarity: {item?.rarity}</p>
                 </div>
               </div>
             )
