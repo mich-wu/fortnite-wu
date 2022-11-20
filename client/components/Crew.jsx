@@ -45,8 +45,11 @@ export default function Crewpack() {
 }
 
 function MonthlyCrew({ name, description, apiRender }) {
+  const currentDate = new Date()
+  const month = currentDate.toLocaleString('default', { month: 'long' })
   return (
     <>
+      <h1>{month} Crew Pack</h1>
       <img src={apiRender} alt={description} className="crew" />
       <p className="crewText">
         {name} <br />
