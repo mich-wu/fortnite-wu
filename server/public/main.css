@@ -127,6 +127,7 @@ h1{
 }
 
 .news-image {
+  border-radius: 15px;
   display: block;
   width: auto;
   height: 20vw;
@@ -152,14 +153,15 @@ h1{
 .news-title{
 font-weight: bold;
 padding-top: 10vw;
-color: #50fa7b;
+color: #f1fa8c;
 font-size: 50px;
 text-decoration: underline;
 }
 
 .news-body{
   font-weight: bold;
-  color: #50fa7b;
+  color: #ff79c6;
+  font-size: 20px;
 }
 
 .container{
