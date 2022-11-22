@@ -170,7 +170,7 @@ text-decoration: underline;
   height: 500px;
   display:grid;
   grid-template-columns: repeat(2, minmax(150px, 2fr));
-  grid-template-rows: repeat(2, minmax(150px, 2fr));
+  grid-template-rows: repeat(3, minmax(150px, 2fr));
   grid-column-gap: 60px;
   grid-row-gap: 60px;
 }
