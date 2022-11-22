@@ -10,6 +10,7 @@ import Kitahankyu from './Kitahankyu'
 import Challenges from './Challenges'
 import News from './News'
 import Crew from './Crew'
+import AddItem from './AddItem'
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/crewpack" element={<Crew />} />
           <Route path="/" element={<Home />} />
+          <Route path="/additem" element={<AddItem />} />
+          <Route path="/crewpack" element={<Crew />} />
           <Route path="/about" element={<About />} />
           <Route path="/locker" element={<Locker />} />
           <Route path="/kitahankyu" element={<Kitahankyu />} />

@@ -1,11 +1,11 @@
 import { getLocker, addItem } from '../apis/locker'
 
-export const VIEW = 'VIEW_LOCKER'
+export const SHOW_LOCKER = 'SHOW_LOCKER'
 export const ADD_ITEM = 'ADD_ITEM'
 
-export function viewLocker(items) {
+export function showLocker(items) {
   return {
-    type: 'VIEW_LOCKER',
+    type: 'SHOW_LOCKER',
     payload: items,
   }
 }
@@ -14,7 +14,7 @@ export function viewLocker(items) {
 export function fetchLocker() {
   return (dispatch) => {
     return getLocker().then((items) => {
-      dispatch(viewLocker(items))
+      dispatch(showLocker(items))
     })
   }
 }
@@ -23,7 +23,7 @@ export function fetchLocker() {
 export function submitItem(item) {
   return (dispatch) => {
     return addItem(item).then((item) => {
-      dispatch(viewLocker(item))
+      dispatch(showLocker(item))
     })
   }
 }
