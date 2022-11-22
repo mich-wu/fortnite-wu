@@ -18,11 +18,11 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="crewpack" element={<Crew />} />
+          <Route path="/crewpack" element={<Crew />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/locker" element={<Locker />} />
-          {<Route path="/kitahankyu" element={<Kitahankyu />} />}
+          <Route path="/kitahankyu" element={<Kitahankyu />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/itemshop" element={<ItemShop />} />
           <Route path="/news" element={<News />} />
