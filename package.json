@@ -42,6 +42,7 @@
     "dracula-ui": "^1.0.3",
     "express": "^4.17.2",
     "knex": "^2.3.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
     "sqlite3": "^5.1.2"
   },
