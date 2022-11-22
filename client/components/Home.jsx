@@ -16,6 +16,12 @@ const Home = () => {
         <a href="/crewpack" className="box">
           Current Crewpack
         </a>
+        <a href="/locker" className="box">
+          Locker
+        </a>
+        <a href="/additem" className="box">
+          Add Item
+        </a>
       </div>
     </>
   )
