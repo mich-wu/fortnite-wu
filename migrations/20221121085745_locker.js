@@ -5,6 +5,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable('locker', (table) => {
     table.increments('id')
+    table.string('url')
     table.string('name')
     table.string('rarity')
     table.integer('vbucks')

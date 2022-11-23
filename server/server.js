@@ -5,14 +5,18 @@ const request = require('superagent')
 const dotenv = require('dotenv')
 dotenv.config()
 
+const locker = require('./routes/locker')
+
+// -- API KEY -- //
 const apiKey = process.env.FORTNITE_API_KEY
 const key = process.env.FN_API_KEY
 
 const server = express()
-
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
+
+server.use('/api/v1/locker', locker)
 
 server.get('/api/v1/store', (req, res) => {
   request
