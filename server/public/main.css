@@ -240,3 +240,21 @@ border-radius: 50px;
 .form{
   background-color:#ff79c6
 }
+
+.lockerimage{
+  width: 14vw;
+  margin: 10px;;
+  background-color: #44475a;
+  /* background: rgba(255, 255, 255, 0.264); */
+  border-radius: 16px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: transform 0.8s;
+}
+
+.lockerimage:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.33); /* Safari 3-8 */
+  transform: scale(5, -1px); 
+}
