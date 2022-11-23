@@ -1,22 +1,24 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchLocker } from '../actions/locker'
 
 const Locker = () => {
-  const displayLocker = useSelector((state) => state.locker)
+  const dispatch = useDispatch()
+  const lockerReducer = useSelector((state) => state)
+
+  useEffect(() => {
+    dispatch(fetchLocker())
+  }, [])
 
   return (
     <div className="home-grid">
-      <h1>KITAHANKYU'S LOCKER</h1>
-
-      <p>I have spent way too much money on this game lol</p>
-      {/* <img src="./images/defaultdance.gif" alt="default-dance"></img> */}
-
-      {displayLocker?.map((item) => {
+      <h1>Locker below:</h1>
+      {lockerReducer?.map((item) => {
         return (
           <div key={item.id}>
             <h2>{item.name}</h2>
 
-            <img alt={item.name} src={`${item.url}`} />
+            <img alt={item.name} src={item.url} />
           </div>
         )
       })}

@@ -2,7 +2,7 @@ import { SHOW_LOCKER, ADD_ITEM } from '../actions/locker'
 
 const initialState = []
 
-const reducer = (state = initialState, action) => {
+export default function lockerReducer(state = initialState, action) {
   const { type, payload } = action
   switch (type) {
     case SHOW_LOCKER:
@@ -15,5 +15,3 @@ const reducer = (state = initialState, action) => {
       return state
   }
 }
-
-export default reducer
