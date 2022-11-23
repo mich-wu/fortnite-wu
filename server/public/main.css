@@ -237,12 +237,9 @@ border-radius: 50px;
   transform: scale(1, -1px); 
 }
 
-.form{
-  background-color:#ff79c6
-}
 
 .lockerimage{
-  width: 14vw;
+  width: 10vw;
   margin: 10px;;
   background-color: #44475a;
   /* background: rgba(255, 255, 255, 0.264); */
@@ -257,4 +254,24 @@ border-radius: 50px;
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.33); /* Safari 3-8 */
   transform: scale(5, -1px); 
+}
+
+.lockerskins{
+  text-align: center;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 40px;
+}
+
+input {
+  display: flex;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.form{
+  background-color: #f1fa8c;
+
 }
