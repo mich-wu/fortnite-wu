@@ -5,7 +5,6 @@ import { fetchLocker } from '../actions/locker'
 const Locker = () => {
   const dispatch = useDispatch()
   const lockerReducer = useSelector((state) => state)
-  console.log(lockerReducer)
 
   useEffect(() => {
     dispatch(fetchLocker())
