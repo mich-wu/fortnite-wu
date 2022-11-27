@@ -9,7 +9,12 @@ const SingleItem = () => {
 
   const selectedItem = displayItem.find((item) => id === item.id)
   if (!selectedItem) {
-    return <div></div>
+    return (
+      <>
+        <h1>Sorry, no skin matching that ID</h1>
+        <a href="/locker">Go back to locker</a>
+      </>
+    )
   }
 
   return (
@@ -19,6 +24,7 @@ const SingleItem = () => {
           <h1>{selectedItem.name}</h1>
           <img src={selectedItem.url} alt={selectedItem.name} />
           <p>{selectedItem.rarity}</p>
+          <a href="/locker">Go back to Locker</a>
         </div>
       )}
     </>
