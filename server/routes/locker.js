@@ -45,4 +45,20 @@ router.post('/', (req, res) => {
     })
 })
 
+//DELETE individual item from database
+router.delete('/:id', (req, res) => {
+  const id = req.params.id
+  db.deleteItem(id)
+    .then(() => {
+      return db.getLocker()
+    })
+    .then((items) => {
+      res.json(items)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Something went wrong' })
+    })
+})
+
 module.exports = router

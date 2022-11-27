@@ -15,8 +15,13 @@ function addItem(newItem, db = connection) {
   return db('locker').insert(newItem)
 }
 
+function deleteItem(id, db = connection) {
+  return db('locker').del().where('id', id)
+}
+
 module.exports = {
   getLocker,
   getItem,
   addItem,
+  deleteItem,
 }

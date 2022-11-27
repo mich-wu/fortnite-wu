@@ -273,5 +273,13 @@ input {
 
 .form{
   background-color: #f1fa8c;
+}
 
+.selecteditem{
+  text-align: center;
+}
+.goback{
+  text-align:center;
+  padding: 10%;
+  color:#ffb86c
 }

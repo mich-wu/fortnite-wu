@@ -12,6 +12,7 @@ exports.seed = async function (knex) {
       name: 'Red Jade',
       rarity: 'Uncommon',
       vbucks: 800,
+      description: 'Summon your fighting spirit',
     },
     {
       id: 1,
@@ -19,6 +20,7 @@ exports.seed = async function (knex) {
       name: 'Jolly Jammer',
       rarity: 'Uncommon',
       vbucks: 800,
+      description: 'Toasty warm and ready for the fight',
     },
     {
       id: 2,
@@ -26,6 +28,8 @@ exports.seed = async function (knex) {
       name: 'Megumi',
       rarity: 'Rare',
       vbucks: 2200,
+      description:
+        'Ex-security guard so inspired by the Wakers that she turned on her bosses to join the cause',
     },
     {
       id: 3,
@@ -33,6 +37,7 @@ exports.seed = async function (knex) {
       name: 'Ariana Grande',
       rarity: 'Icon Series',
       vbucks: 2000,
+      description: 'Her presence? Sweet. Her aura? Bright',
     },
   ])
 }

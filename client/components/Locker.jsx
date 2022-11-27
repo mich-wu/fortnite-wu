@@ -20,9 +20,6 @@ const Locker = () => {
             <div key={item.id}>
               <Link to={`/item/${item.id}`}>
                 <img alt={item.name} src={item.url} className="lockerimage" />
-                <h2>{item.name}</h2>
-                <p>{item.rarity}</p>
-                <p>{item.vbucks} vBucks</p>
               </Link>
             </div>
           )

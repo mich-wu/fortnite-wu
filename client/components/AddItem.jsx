@@ -11,6 +11,7 @@ function AddItem() {
     name: ' ',
     rarity: ' ',
     vbucks: ' ',
+    description: '',
   })
 
   function handleChange(event) {
@@ -42,6 +43,9 @@ function AddItem() {
 
         <label>vBucks: </label>
         <input type="number" name="vbucks" onChange={handleChange} />
+
+        <label>Description: </label>
+        <input type="text" name="description" onChange={handleChange} />
 
         <button onClick={handleSubmit}>Add to your locker</button>
       </form>

@@ -23,3 +23,9 @@ export function addItem(newItem) {
       return result.body
     })
 }
+
+export function deleteItem(id) {
+  return request.delete(`${rootUrl}${id}`).then((result) => {
+    return result.body
+  })
+}
