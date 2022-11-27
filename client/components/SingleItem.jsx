@@ -11,7 +11,7 @@ const SingleItem = () => {
   if (!selectedItem) {
     return (
       <>
-        <h1>Sorry, no skin matching that ID</h1>
+        <h1>Sorry, no skin matches that ID</h1>
         <a href="/locker">Go back to locker</a>
       </>
     )
