@@ -264,7 +264,6 @@ border-radius: 50px;
 }
 
 input {
-  display: flex;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -272,7 +271,16 @@ input {
 }
 
 .form{
-  background-color: #f1fa8c;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #bd93f9;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
 }
 
 .selecteditem{
