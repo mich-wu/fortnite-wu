@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { deleteLocker, fetchLocker } from '../actions/locker'
 
 const SingleItem = () => {
@@ -43,7 +43,14 @@ const SingleItem = () => {
           <p>{selectedItem.description}</p>
           <br />
           <br />
-          <button onClick={handleDelete}>Delete</button>
+          <Link to="/locker">
+            <button className="addlocker">Go back to Locker</button>
+          </Link>
+          <br />
+          <br />
+          <button onClick={handleDelete} className="addlocker">
+            Remove from Locker
+          </button>
         </div>
       )}
     </>
