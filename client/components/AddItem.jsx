@@ -47,7 +47,9 @@ function AddItem() {
         <label>Description: </label>
         <input type="text" name="description" onChange={handleChange} />
 
-        <button onClick={handleSubmit}>Add to your locker</button>
+        <button onClick={handleSubmit} className="addlocker">
+          Add to locker
+        </button>
       </form>
     </>
   )
