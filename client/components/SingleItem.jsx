@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { deleteLocker, fetchLocker } from '../actions/locker'
+import { deleteLocker } from '../actions/locker'
 
 const SingleItem = () => {
   const navigate = useNavigate()
@@ -9,10 +9,6 @@ const SingleItem = () => {
   const params = useParams()
   const id = Number(params.id)
   const displayItem = useSelector((state) => state)
-
-  // useEffect(() => {
-  //   dispatch(fetchLocker())
-  // }, [])
 
   const selectedItem = displayItem.find((item) => id === item.id)
   if (!selectedItem) {
