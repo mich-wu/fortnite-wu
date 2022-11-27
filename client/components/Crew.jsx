@@ -30,9 +30,6 @@ export default function Crewpack() {
   const rewards = getRewards(crewData)
   const { name, description, apiRender } = rewards[0]
 
-  // const getRewardsByIndex = (crewData, index) => {
-  //   const rewards = getRewards(crewData)
-  //   return rewards[index]
   return (
     <>
       <MonthlyCrew

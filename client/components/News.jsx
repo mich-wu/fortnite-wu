@@ -40,39 +40,3 @@ export default function News() {
     </div>
   )
 }
-
-{
-  /* <p>{newsData.data?.motds[0].title}</p> <br />
-<p>{newsData.data?.motds[0].body}</p>
-<img
-  src={newsData.data?.motds[0].image}
-  alt="newsimg"
-  className="item-image"
-/>
-<br />
-<p>{newsData.data?.motds[1].title}</p>
-<p>{newsData.data?.motds[1].body}</p>
-<img
-  src={newsData.data?.motds[1].image}
-  alt="newsimg"
-  className="item-image"
-/>
-<br />
-<p>{newsData.data?.motds[2].title}</p>
-<p>{newsData.data?.motds[2].body}</p>
-<img
-  src={newsData.data?.motds[2].image}
-  alt="newsimg"
-  className="item-image"
-/>
-<br />
-<p>{newsData.data?.motds[3].title}</p>
-<p>{newsData.data?.motds[3].body}</p>
-<img
-  src={newsData.data?.motds[3].image}
-  alt="newsimg"
-  className="item-image"
-/>
-<br />
-</h1> */
-}

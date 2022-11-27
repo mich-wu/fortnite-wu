@@ -11,6 +11,7 @@ import Challenges from './Challenges'
 import News from './News'
 import Crew from './Crew'
 import AddItem from './AddItem'
+import SingleItem from './SingleItem'
 
 function App() {
   return (
@@ -20,14 +21,15 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/additem" element={<AddItem />} />
           <Route path="/crewpack" element={<Crew />} />
           <Route path="/about" element={<About />} />
-          <Route path="/locker" element={<Locker />} />
           <Route path="/kitahankyu" element={<Kitahankyu />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/itemshop" element={<ItemShop />} />
           <Route path="/news" element={<News />} />
+          <Route path="/locker" element={<Locker />} />
+          <Route path="/additem" element={<AddItem />} />
+          <Route path="/item/:id" element={<SingleItem />} />
         </Routes>
       </Router>
     </>
