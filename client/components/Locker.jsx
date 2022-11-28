@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 const Locker = () => {
   const dispatch = useDispatch()
   const lockerReducer = useSelector((state) => state)
+  console.log(lockerReducer)
 
   useEffect(() => {
     dispatch(fetchLocker())
@@ -14,17 +15,21 @@ const Locker = () => {
   return (
     <>
       <h1>I spend too much money on this game lol</h1>
-      <div className="lockerskins">
-        {lockerReducer?.map((item) => {
-          return (
-            <div key={item.id}>
-              <Link to={`/item/${item.id}`}>
-                <img alt={item.name} src={item.url} className="lockerimage" />
-              </Link>
-            </div>
-          )
-        })}
-      </div>
+      {lockerReducer ? (
+        <div className="lockerskins">
+          {lockerReducer?.map((item) => {
+            return (
+              <div key={item.id}>
+                <Link to={`/item/${item.id}`}>
+                  <img alt={item.name} src={item.url} className="lockerimage" />
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+      ) : (
+        <div>LOADING</div>
+      )}
     </>
   )
 }

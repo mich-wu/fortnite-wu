@@ -26,6 +26,7 @@ export function addItem(newItem) {
 
 export function deleteItem(id) {
   return request.delete(`${rootUrl}${id}`).then((result) => {
+    console.log('apiClient:', result.body)
     return result.body
   })
 }

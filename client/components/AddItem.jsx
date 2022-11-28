@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { submitItem } from '../actions/index'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 function AddItem() {
   const dispatch = useDispatch()
@@ -50,6 +50,10 @@ function AddItem() {
         <button onClick={handleSubmit} className="addlocker">
           Add to locker
         </button>
+
+        <Link to="/locker">
+          <button className="addlocker">Go to Locker</button>
+        </Link>
       </form>
     </>
   )
