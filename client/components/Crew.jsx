@@ -47,7 +47,13 @@ function MonthlyCrew({ name, description, apiRender }) {
   return (
     <>
       <h1>{month} Crew Pack</h1>
-      <img src={apiRender} alt={description} className="crew" />
+      <a
+        href="https://www.epicgames.com/fortnite/en-US/fortnite-crew-subscription"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src={apiRender} alt={description} className="crew" />
+      </a>
       <p className="crewText">
         {name} <br />
         {description}

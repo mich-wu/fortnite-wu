@@ -283,6 +283,32 @@ input {
   border-radius: 10px;
 }
 
+.addlocker{
+  background-color: #ff79c6;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+}
+
+.addlocker:hover,
+.addlocker:focus {
+  background-color: #ff5555;
+}
+
 .selecteditem{
   text-align: center;
 }

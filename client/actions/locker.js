@@ -41,6 +41,7 @@ export function deleteLocker(id) {
   return (dispatch) => {
     return deleteItem(id).then(() => {
       dispatch(removeItem(id))
+      console.log('actions:', id)
     })
   }
 }
