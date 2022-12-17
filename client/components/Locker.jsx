@@ -14,7 +14,7 @@ const Locker = () => {
 
   return (
     <>
-      <h1>I spend too much money on this game lol</h1>
+      <h1>Kita&apos;s Locker</h1>
       {lockerReducer ? (
         <div className="lockerskins">
           {lockerReducer?.map((item) => {

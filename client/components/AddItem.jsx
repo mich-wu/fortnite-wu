@@ -30,7 +30,7 @@ function AddItem() {
 
   return (
     <>
-      <h1>Did you spend money again? lol </h1>
+      <h1>Enter item details below </h1>
       <form className="form">
         <label>URL: </label>
         <input type="text" name="url" onChange={handleChange} />
