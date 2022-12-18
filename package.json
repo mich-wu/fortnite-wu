@@ -12,9 +12,7 @@
     "dev:client": "npm run webpack -- --watch",
     "dev:server": "nodemon server",
     "start": "node server",
-    
     "build": "webpack --config ./client/webpack.config.js --mode production",
-
     "server": "node server",
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -43,6 +41,7 @@
     "dotenv": "^16.0.3",
     "dracula-ui": "^1.0.3",
     "express": "^4.17.2",
+    "html-webpack-plugin": "^5.5.0",
     "knex": "^2.3.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",

@@ -26,8 +26,14 @@
 // }
 
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '../server/public/', 'index.html'),
+    }),
+  ],
   entry: path.join(__dirname, 'index.js'),
   output: {
     path: path.join(__dirname, '../build'),
@@ -43,7 +49,12 @@ module.exports = {
       },
     ],
   },
+
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+
+  // stats: {
+  //   children: true,
+  // },
 }
