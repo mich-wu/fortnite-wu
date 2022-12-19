@@ -1,3 +1,12 @@
 [build]
-  functions = "server/db"
-  publish = "server/public"
+  command = "npm run build"
+  publish = "client/build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.backend]
+  command = "npm run build"
+  publish = "server/build"
