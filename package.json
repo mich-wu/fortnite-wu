@@ -14,12 +14,17 @@
     "dev:server": "nodemon server",
     "start": "node server",
     "build": "webpack --config ./client/webpack.config.js --mode production",
+    "build:server": "netlify-lambda build functions",
+    "build:client": "npm run build",
+    "build:all": "run-p build:client build:server",
     "server": "node server",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "webpack": "webpack --config ./client/webpack.config.js",
     "lint": "eslint --ext .js,.jsx .",
-    "knex": "knex --knexfile ./server/db/knexfile.js"
+    "knex": "knex --knexfile ./server/db/knexfile.js",
+    
+    "start:backend": "netlify-lambda serve functions"
   },
   "keywords": [
     "frontend"
