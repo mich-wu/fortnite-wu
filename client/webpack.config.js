@@ -6,7 +6,7 @@ module.exports = {
     path: path.join(__dirname, '../server/public'),
     filename: 'bundle.js',
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -18,9 +18,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-  },
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.join(__dirname, '../server/public'),
   },
 }
