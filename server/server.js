@@ -3,6 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const request = require('superagent')
 const dotenv = require('dotenv')
+const proxy = require('http-proxy-middleware')
 dotenv.config()
 
 const locker = require('./routes/locker')
@@ -15,6 +16,14 @@ const server = express()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
+
+server.use(
+  '/',
+  proxy({
+    target: 'https://magenta-salmiakki-548695.netlify.app/',
+    changeOrigin: true,
+  })
+)
 
 server.use('/api/v1/locker', locker)
 

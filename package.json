@@ -6,6 +6,7 @@
   "main": "server/index.js",
   "author": "Dev Academy Aotearoa",
   "license": "ISC",
+  "proxy": "https://magenta-salmiakki-548695.netlify.app/",
   "scripts": {
     "client": "webpack serve --config ./client/webpack.config.js --hot",
     "dev": "run-p dev:client dev:server",
