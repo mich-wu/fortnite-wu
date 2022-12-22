@@ -30,6 +30,12 @@ git clone https://github.com/mich-wu/personal-project.git
 npm i in your terminal 
 ```
 
+Run migrations & seed for locker database
+```zh
+npm run knex migrate:latest
+npm run knex seed:run
+```
+
 Run the server via the terminal
 ```zh
 npm run dev
