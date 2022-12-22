@@ -27,7 +27,7 @@ To use:
 
 ```zh
 git clone https://github.com/mich-wu/personal-project.git
-cd [your-app] && npm i
+npm i in your terminal 
 ```
 
 Run the server via the terminal
