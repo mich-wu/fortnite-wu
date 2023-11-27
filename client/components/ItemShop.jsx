@@ -19,24 +19,26 @@ export default function ItemShop() {
     <>
       <div>
         <h1>Todays item shop below!</h1>
-        <Timer />
+        {/* <Timer /> */}
+
         <div className="skins">
-          {shopData?.map((item) => {
-            return (
-              <div key={item.manifestId}>
-                <img
-                  src={item?.imageUrl}
-                  alt="fortnite item shop"
-                  className="shopimage"
-                />
-                <div className="itemshoptext">
-                  <p className="item-name">{item?.name}</p>
-                  <p className="vBucks">{item?.vBucks} vBucks</p>
-                  <p className="vBucks">Rarity: {item?.rarity}</p>
-                </div>
+          {shopData.shop?.map((item) => (
+            <>
+              {item.granted.map((image) => {
+                return (
+                  <>
+                    <img src={image.images.icon} alt="" className="shopimage" />
+                  </>
+                )
+              })}
+              <div className="itemshoptext">
+                <p className="item-name">{item.displayName}</p>
+                <p className="vBucks">
+                  {item.price.finalPrice} {'vBucks'}
+                </p>
               </div>
-            )
-          })}
+            </>
+          ))}
         </div>
       </div>
     </>

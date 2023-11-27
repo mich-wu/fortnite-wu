@@ -7,8 +7,8 @@ export default function News() {
   useEffect(() => {
     getNews()
       .then((currentNews) => {
-        console.log(currentNews)
         setNewsData(currentNews)
+        console.log('news news', currentNews)
       })
       .catch((err) => {
         err.message

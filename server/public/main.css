@@ -72,23 +72,23 @@ h1{
 }
 
 .skins{
-  text-align: center;
+padding: 1.5rem 5rem;
+  /* text-align: center;
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px; */
 }
 
 .shopimage:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.33); /* Safari 3-8 */
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(5, -1px); 
 }
 
 .shopimage{
-  width: 20vw;
+  width: 15vw;
   margin: 10px;;
   background-color: #44475a;
-  /* background: rgba(255, 255, 255, 0.264); */
   border-radius: 16px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px);
@@ -97,8 +97,10 @@ h1{
 }
 
 .itemshoptext{
-  text-align: center;
-  color: #ffb86c;
+display: flex;
+padding: 1rem 1rem;
+color: #ffb86c;
+gap: 1rem;
 }
 
 .item-name{
