@@ -8,7 +8,7 @@ dotenv.config()
 const locker = require('./routes/locker')
 
 // -- API KEY -- //
-const apiKey = process.env.FORTNITE_API_KEY
+// const apiKey = process.env.FORTNITE_API_KEY
 const key = process.env.FN_API_KEY
 
 const server = express()
@@ -18,12 +18,13 @@ server.use(cors('*'))
 
 server.use('/api/v1/locker', locker)
 
-server.get('/api/v1/store', (req, res) => {
+server.get('/api/v2/shop', (req, res) => {
   request
-    .get('https://api.fortnitetracker.com/v1/store')
-    .set('TRN-Api-Key', apiKey)
+    .get('https://fortniteapi.io/v2/shop?lang=en')
+    .set('Authorization', key)
     .then((data) => {
       res.json(data.body)
+      // console.log(data.body)
     })
     .catch((err) => {
       console.error(err)
@@ -31,6 +32,7 @@ server.get('/api/v1/store', (req, res) => {
     })
 })
 
+// NEWS //
 // BELOW IS USING API FROM https://dash.fortnite-api.com/
 
 server.get('/api/v2/news/br', (req, res) => {
@@ -45,6 +47,8 @@ server.get('/api/v2/news/br', (req, res) => {
     })
 })
 
+// CREW-PACK //
+
 server.get('/api/v2/crew', (req, res) => {
   request
     .get('https://fortniteapi.io/v2/crew?lang=en')
@@ -57,6 +61,7 @@ server.get('/api/v2/crew', (req, res) => {
       res.sendStatus(500)
     })
 })
+
 server.get('/api/v3/challenges', (req, res) => {
   request
     .get('https://fortniteapi.io/v3/challenges?season=current&lang=en')
