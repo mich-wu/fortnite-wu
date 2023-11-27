@@ -8,7 +8,6 @@ export default function News() {
     getNews()
       .then((currentNews) => {
         setNewsData(currentNews)
-        console.log('news news', currentNews)
       })
       .catch((err) => {
         err.message

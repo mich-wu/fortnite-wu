@@ -1,57 +1,41 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Timer = () => {
-  const Ref = useRef(null)
-  const [timer, setTimer] = useState('00:00:00')
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining())
 
-  const getTimeRemaining = (e) => {
-    const total = Date.parse(e) - Date.parse(new Date())
-    const seconds = Math.floor((total / 1000) % 60)
-    const minutes = Math.floor((total / 1000 / 60) % 60)
-    const hours = Math.floor((total / 1000 / 60 / 60) % 24)
-    return {
-      total,
-      hours,
-      minutes,
-      seconds,
-    }
-  }
+  function calculateTimeRemaining() {
+    const now = new Date()
+    const targetTime = new Date(now)
+    targetTime.setUTCHours(24, 0, 0, 0)
 
-  const startTimer = (e) => {
-    let { total, hours, minutes, seconds } = getTimeRemaining(e)
-    if (total >= 0) {
-      setTimer(
-        (hours > 9 ? hours : '0' + hours) +
-          ':' +
-          (minutes > 9 ? minutes : '0' + minutes) +
-          ':' +
-          (seconds > 9 ? seconds : '0' + seconds)
-      )
-    }
-  }
-
-  const clearTimer = (e) => {
-    setTimer('24:59:59')
-    if (Ref.current) clearInterval(Ref.current)
-    const id = setInterval(() => {
-      startTimer(e)
-    }, 1000)
-    Ref.current = id
-  }
-
-  const getDeadTime = () => {
-    let deadline = new Date()
-    deadline.setSeconds(deadline.getSeconds() + 9144)
-    return deadline
+    const timeDiff = targetTime - now
+    return timeDiff >= 0 ? timeDiff : 0
   }
 
   useEffect(() => {
-    clearTimer(getDeadTime())
+    const interval = setInterval(() => {
+      setTimeRemaining(calculateTimeRemaining())
+    }, 1000)
+
+    return () => clearInterval(interval)
   }, [])
 
+  const formatTime = (milliseconds) => {
+    const totalSeconds = Math.floor(milliseconds / 1000)
+    const hours = Math.floor(totalSeconds / 3600)
+    const minutes = Math.floor((totalSeconds % 3600) / 60)
+    const seconds = totalSeconds % 60
+
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(
+      2,
+      '0'
+    )}:${String(seconds).padStart(2, '0')}`
+  }
+
   return (
-    <div className="Timer">
-      <h2>{timer}</h2>
+    <div>
+      <p>Shop resets in</p>
+      <h2>{formatTime(timeRemaining)}</h2>
     </div>
   )
 }

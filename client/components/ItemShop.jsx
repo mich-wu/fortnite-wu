@@ -19,7 +19,7 @@ export default function ItemShop() {
     <>
       <div>
         <h1>Todays item shop below!</h1>
-        {/* <Timer /> */}
+        <Timer />
 
         <div className="skins">
           {shopData.shop?.map((item) => (
