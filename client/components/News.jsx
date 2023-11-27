@@ -18,7 +18,7 @@ export default function News() {
     <div className="App">
       <h1>Todays news below!</h1>
 
-      {newsData.data?.motds.map((news) => {
+      {newsData?.data?.motds.map((news) => {
         return (
           <div key={news.id}>
             <div className="news-wrapper">

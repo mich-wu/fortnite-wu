@@ -22,7 +22,7 @@ export default function ItemShop() {
         <Timer />
 
         <div className="skins">
-          {shopData.shop?.map((item) => (
+          {shopData?.shop?.map((item) => (
             <>
               {item.granted.map((image) => {
                 return (
